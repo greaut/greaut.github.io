@@ -42,6 +42,7 @@
 <p> Voici ma main page de mon github<p>
 
 <p>Mes favoris :</p>
+
 <div id="liste"></div>
 <script type="text/javascript">
     var target_elt = $('#liste');
@@ -52,7 +53,7 @@
         $.each(data.data, function(i, item) {
             var li = $('<li/>').appendTo(ul);
             $("<a/>").attr("href", item.html_url)
-                .attr("mes favoris", "mes favoris")
+                .attr("title", "mes favoris")
                 .html(item.name)
                 .appendTo(target_elt).appendTo(li);
             if ( i === 10 ) {  // max items
